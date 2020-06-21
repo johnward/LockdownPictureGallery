@@ -1,0 +1,45 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558 
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "type": "shell",
+            "label": "g++ build active file",
+            "command": "/usr/bin/g++",
+            "args": [
+                "-g",
+                "${workspaceFolder}/main.cpp",
+                "${workspaceFolder}/Mesh.cpp",
+                "${workspaceFolder}/Shader.cpp",
+                "${workspaceFolder}/GLWindow.cpp",
+                "${workspaceFolder}/Camera.cpp",
+                "${workspaceFolder}/Texture.cpp",
+                "${workspaceFolder}/Light.cpp",
+                "${workspaceFolder}/DirectionalLight.cpp",
+                "${workspaceFolder}/PointLight.cpp",
+                "${workspaceFolder}/Material.cpp",
+                "-o",
+                "${fileDirname}/main.exe",
+                //"${fileDirname}/${fileBasenameNoExtension}",
+                "-I/usr/local/include",
+                "-I/usr/include",
+                "-I/usr/include/SDL2",
+                "-I/usr/include/freetype2",
+                "-lGL",
+                "-lGLU",
+                "-lglfw",
+                "-ldl",
+                "-lGLEW",
+                "-lSOIL"
+            ],
+            "options": {
+                "cwd": "/usr/bin"
+            },
+            "problemMatcher": [
+                "$gcc"
+            ],
+            "group": "build"
+        }
+    ]
+}
