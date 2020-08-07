@@ -10,15 +10,17 @@
             "args": [
                 "-g",
                 "${workspaceFolder}/main.cpp",
-                "${workspaceFolder}/../OpenGLCommon/Mesh.cpp",
-                "${workspaceFolder}/../OpenGLCommon/Shader.cpp",
-                "${workspaceFolder}/../OpenGLCommon/GLWindow.cpp",
-                "${workspaceFolder}/../OpenGLCommon/Camera.cpp",
-                "${workspaceFolder}/../OpenGLCommon/Texture.cpp",
-                "${workspaceFolder}/../OpenGLCommon/Light.cpp",
-                "${workspaceFolder}/../OpenGLCommon/DirectionalLight.cpp",
-                "${workspaceFolder}/../OpenGLCommon/PointLight.cpp",
-                "${workspaceFolder}/../OpenGLCommon/Material.cpp",
+                "${workspaceFolder}/common/Mesh.cpp",
+                "${workspaceFolder}/common/Shader.cpp",
+                "${workspaceFolder}/common/GLWindow.cpp",
+                "${workspaceFolder}/common/Camera.cpp",
+                "${workspaceFolder}/common/Texture.cpp",
+                "${workspaceFolder}/common/Light.cpp",
+                "${workspaceFolder}/common/DirectionalLight.cpp",
+                "${workspaceFolder}/common/PointLight.cpp",
+                "${workspaceFolder}/common/SpotLight.cpp",
+                "${workspaceFolder}/common/Material.cpp",
+                "${workspaceFolder}/common/Model.cpp",
                 "-o",
                 "${fileDirname}/main.exe",
                 //"${fileDirname}/${fileBasenameNoExtension}",
@@ -31,7 +33,8 @@
                 "-lglfw",
                 "-ldl",
                 "-lGLEW",
-                "-lSOIL"
+                "-lSOIL",
+                "-lassimp"
             ],
             "options": {
                 "cwd": "/usr/bin"
